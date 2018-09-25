@@ -1,0 +1,16 @@
+<h1>TO-DO List</h1>
+<a href="/item/new/">New (+)</a>
+{{#if items}}
+<ul>
+  {{#each items}}
+  <li>
+    <a href="/item/{{id}}">{{content}}</a>
+    {{#if status}}
+    <input type="checkbox" checked>
+    {{else}}
+    <input type="checkbox">
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

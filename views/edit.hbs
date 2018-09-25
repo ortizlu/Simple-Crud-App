@@ -1,0 +1,19 @@
+<h2>Edit Item</h2>
+
+<form action="/item/{{id}}?_method=PUT" method="POST" accept-charset="utf-8">
+  <p>
+    <label>Content:</label>
+    <input type="text" value="{{content}}" name="content" placeholder="Content" />
+  </p>
+  <p>
+    <label>Status:</label>
+    {{#if status}}
+    <input type="checkbox" value="true" name="status" id="" checked />
+    {{else}}
+    <input type="checkbox" value="true" name="status" id="" />
+    {{/if}}
+  </p>
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
+</form
